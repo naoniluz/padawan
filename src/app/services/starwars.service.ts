@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import {catchError, retry } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class StarwarsService {
   private urlApi = 'https://swapi.dev/api/';
@@ -13,9 +13,9 @@ export class StarwarsService {
   this.getPlanets();
   }
   private async getPlanets() {
-    (this.http
+    this.http
     .get(this.urlApi + 'planets')
-    .pipe(retry(2)))
+    .pipe(retry(2))
     .subscribe((resposta):any => {
       console.log(resposta);
     });
