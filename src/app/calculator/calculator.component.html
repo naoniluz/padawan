@@ -1,0 +1,26 @@
+<h1>{{ calculatorTitle }}</h1>
+
+<p> {{ calculatorDescription }}</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="row">
+                <div class="s12 m6">
+                    <p>Digite um número: <input type="number" [(ngModel)]=num1></p>
+
+                    <button class="btn btn-outline-secondary" (click) ="soma()">+</button>
+                    <button class="btn btn-outline-secondary" (click) ="sub()">-</button>
+                    <button class="btn btn-outline-secondary"  (click) ="mult()">x</button>
+                    <button class="btn btn-outline-secondary"  (click) ="div()">/</button>
+
+                    <p>Digite um número: <input type="number" [(ngModel)]=num2></p>
+
+                    
+
+                    <p>Resultado: {{result}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
